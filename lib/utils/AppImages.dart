@@ -24,4 +24,35 @@ class Appimages {
 
   static const String selectedprofile = "assets/images/selectedprofile.png";
   static const String uselectedprofile = "assets/images/unselectedprofile.png";
+
+
+  static const String Sun = "assets/images/Sun.png";
+
+
+  static const String birthdayimage = "assets/images/Frame 16.png";
+
+  static const String meetingimage = "assets/images/Frame 17.png";
+
+  static const String Exhibitionimage = "assets/images/Frame 18.png";
+
+  static const String Holidayimage = "assets/images/holiday.png";
+
+
+  static const String lighticon = "assets/images/Vector.png";
+
+  static const String darkicon = "assets/images/darkvector.png";
+
+  static const String lighteventicon = "assets/images/eventicon.png";
+  static const String darkeventicon = "assets/images/darlevet.png";
+
+
+  static const String lightTimeicon = "assets/images/timelight.png";
+  static const String darkTimeicon = "assets/images/darktime.png";
+
+  static const String lightLocarionicon = "assets/images/lightlocation.png";
+  static const String darkLocarionicon= "assets/images/darklocation.png";
+
+  static const String Editicon = "assets/images/Union.png";
+  static const String Deleteicon= "assets/images/delete2.png";
+
 }

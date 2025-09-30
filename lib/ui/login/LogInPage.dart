@@ -11,6 +11,7 @@ import 'CreateAccountPage.dart';
 import 'ResetPassword.dart';
 import 'SwitchLanguageButton.dart';
 import 'TextFieldContainer.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class Loginpage extends StatelessWidget {
 
@@ -24,17 +25,18 @@ class Loginpage extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 16),
         child: Column(children: [
           Image.asset(Appimages.Eventlylogo,width:Width* 0.3,height:Height* 0.2),
-          Textfieldcontainer(text: "Email", prefixIcon: Icons.email),
-          Textfieldcontainer(text: "Password", prefixIcon: Icons.lock,suffixIcon: Icons.visibility),
-InkWell(child:Text("Forget Password?",style: TextStyle(color: Appcolors.lightbluecolor,fontStyle: FontStyle.italic,decoration: TextDecoration.underline,fontSize: 16,fontWeight: FontWeight.w700,),textAlign: TextAlign.end,),
+          Textfieldcontainer(text:           AppLocalizations.of(context) !.email,
+               prefixIcon: Icons.email),
+          Textfieldcontainer(text:  AppLocalizations.of(context) !.password, prefixIcon: Icons.lock,suffixIcon: Icons.visibility),
+InkWell(child:Text(AppLocalizations.of(context) !.forgetPassword,style: TextStyle(color: Appcolors.lightbluecolor,fontStyle: FontStyle.italic,decoration: TextDecoration.underline,fontSize: 16,fontWeight: FontWeight.w700,),textAlign: TextAlign.end,),
     onTap: (){
       Navigator.push(context, MaterialPageRoute(builder: (_) => Resetpassword()));
 
     })
   ,
-          InkWell(child: Bluebutton(buttontext: 'Login',),
+          InkWell(child: Bluebutton(buttontext: AppLocalizations.of(context) !.login,),
               onTap:(){
-                Navigator.push(context, MaterialPageRoute(builder: (_) => Homescreen()));
+                Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => Homescreen()));
 
               },),
           RichText(
@@ -42,11 +44,11 @@ InkWell(child:Text("Forget Password?",style: TextStyle(color: Appcolors.lightblu
               style: TextStyle(fontSize: 16,fontWeight: FontWeight.w500),
               children: [
                 TextSpan(
-                  text: "Don’t Have Account ? ",
+                  text:AppLocalizations.of(context) !.noAccount,
                   style: TextStyle(color: Appcolors.blackcolor),
                 ),
                 TextSpan(
-                  text: "Create Account",
+                  text: AppLocalizations.of(context) !.createAccount,
                   style: TextStyle(
                     color: Appcolors.lightbluecolor,
                     fontStyle: FontStyle.italic,
@@ -80,7 +82,7 @@ child: Row(
   children: [
     Image.asset(Appimages.google),
     SizedBox(width: 5,),
-    Text("Login With Google",style: TextStyle(
+    Text(AppLocalizations.of(context) !.loginWithGoogle,style: TextStyle(
         fontSize: 20,fontWeight: FontWeight.w500,
       color: Appcolors.lightbluecolor
 

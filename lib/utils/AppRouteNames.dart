@@ -5,5 +5,8 @@ class Approutenames {
   static const String createaccRoutename = 'createacc';
 
   static const String ResetPassRoutename = 'resetpass';
+  static const String HomeTab = 'HomeTab';
+
+  static const String createevent = 'HomeTab';
 
 }

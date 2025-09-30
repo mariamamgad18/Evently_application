@@ -12,7 +12,7 @@ class Bluebutton extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 22.0),
       child: Container(
-        width:Width* 0.9,
+        //width:Width* 0.9,
         height:Height*0.07 ,
         alignment: Alignment.center,
         decoration: BoxDecoration(
