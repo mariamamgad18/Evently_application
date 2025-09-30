@@ -28,9 +28,11 @@ class _EventcontainerState extends State<Eventcontainer> {
     var Height = MediaQuery.of(context).size.height;
     var Width = MediaQuery.of(context).size.width;
     return Container(
+      padding: EdgeInsets.symmetric(vertical: 10),
       width: 0.918 * Width,
-      height: Height * 0.241,
+      height: Height * 0.300,
       decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(16),
         image: DecorationImage(
           image: AssetImage(widget.imagename),
           fit: BoxFit.fill,
@@ -39,39 +41,47 @@ class _EventcontainerState extends State<Eventcontainer> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
+         Align(
+           alignment: Alignment.topLeft,
+           child:  Container(
+             margin: EdgeInsets.only(left: 8),
+             padding: EdgeInsets.all(8),
+             width: 0.109 * Width,
+             height: Height * 0.0582,
+             decoration: BoxDecoration(
+               borderRadius: BorderRadius.circular(8),
+               color: Theme.of(context).primaryColor,
+             ),
+             child: Column(
+               children: [
+                 Expanded(
+                   child: Text(
+                     widget.day.toString(),
+                     style: TextStyle(
+                       fontSize: 10,
+                       color: Appcolors.lightbluecolor,
+                       fontWeight: FontWeight.w700,
+                     ),
+                   ),
+                 ),
+                 Expanded(
+                   child: Text(
+                     widget.month,
+                     style: TextStyle(
+                       fontSize:10,
+                       color: Appcolors.lightbluecolor,
+                       fontWeight: FontWeight.w700,
+                     ),
+                   ),
+                 ),
+               ],
+             ),
+           ),
+         ),
           Container(
-            padding: EdgeInsets.all(8),
-            width: 0.109 * Width,
-            height: Height * 0.0582,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(8),
-              color: Theme.of(context).primaryColor,
-            ),
-            child: Column(
-              children: [
-                Text(
-                  widget.day.toString(), 
-                  style: TextStyle(
-                    fontSize: 20,
-                    color: Appcolors.lightbluecolor,
-                    fontWeight: FontWeight.w700,
-                  ),
-                ),
-                Text(
-                  widget.month,
-                  style: TextStyle(
-                    fontSize: 20,
-                    color: Appcolors.lightbluecolor,
-                    fontWeight: FontWeight.w700,
-                  ),
-                ),
-              ],
-            ),
-          ),
-          Container(
-            padding: EdgeInsets.all(8),
+           padding: EdgeInsets.symmetric(horizontal: 8),
             width: 0.877 * Width,
-            height: Height * 0.0475,
+           // height: Height * 0.0475,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8),
               color: Theme.of(context).primaryColor,
@@ -93,7 +103,7 @@ class _EventcontainerState extends State<Eventcontainer> {
                     isBlue ? Icons.favorite : Icons.favorite_border,
                     color: isBlue
                         ? Appcolors.lightbluecolor
-                        : Appcolors.transparentColor,
+                        : Appcolors.lightbluecolor,
                     size: 30,
                   ),
                   onPressed: () {
