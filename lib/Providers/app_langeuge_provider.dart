@@ -6,7 +6,7 @@ void ChangeLanguage ( String newLanguege){
 if(appLanguege==newLanguege){
 return;
 }
-appLanguege==newLanguege;
+appLanguege=newLanguege;
 notifyListeners();
 
 }

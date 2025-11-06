@@ -7,6 +7,9 @@ class Approutenames {
   static const String ResetPassRoutename = 'resetpass';
   static const String HomeTab = 'HomeTab';
 
-  static const String createevent = 'HomeTab';
+  static const String createevent = 'createevent';
+  static const String Profiletab = 'Profiletab';
+
+
 
 }

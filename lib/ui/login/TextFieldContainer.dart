@@ -1,28 +1,42 @@
 import 'package:flutter/material.dart';
-
 import '../../utils/AppColors.dart';
 import '../../utils/app_theme.dart';
 
 class Textfieldcontainer extends StatelessWidget {
-
   final String text;
   final IconData prefixIcon;
   final IconData? suffixIcon;
+  final TextEditingController? controller; // ✅ مضافة
+  final String? Function(String?)? validator; // ✅ مضافة
+  final bool obscureText; // ✅ عشان الباسورد
 
-  Textfieldcontainer({required this.text,
+  const Textfieldcontainer({
+    Key? key,
+    required this.text,
     required this.prefixIcon,
-    this.suffixIcon,});
+    this.suffixIcon,
+    this.controller,
+    this.validator,
+    this.obscureText = false,
+  }) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    var Height = MediaQuery.of(context).size.height;
-    var Width = MediaQuery.of(context).size.width;
+    var height = MediaQuery.of(context).size.height;
+
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 10.0),
-      child: TextField(
+      child: TextFormField( // ✅ بدّلنا TextField بـ TextFormField
+        controller: controller,
+        validator: validator,
+        obscureText: obscureText,
         decoration: InputDecoration(
           filled: true,
           fillColor: Appcolors.transparentColor,
-          contentPadding: EdgeInsets.symmetric(vertical: Height * 0.02, horizontal: 10),
+          contentPadding: EdgeInsets.symmetric(
+            vertical: height * 0.02,
+            horizontal: 10,
+          ),
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(16),
             borderSide: BorderSide(
@@ -37,21 +51,19 @@ class Textfieldcontainer extends StatelessWidget {
               width: 2,
             ),
           ),
-          hintText:text,
-          suffixIcon: Icon(
-              suffixIcon,
+          hintText: text,
+          prefixIcon: Icon(
+            prefixIcon,
             color: AppTheme.TextFieldIconColor(context),
           ),
-
-      prefixIcon:  Icon(
-        prefixIcon,
-        color: AppTheme.TextFieldIconColor(context),
-      ),
-
+          suffixIcon: suffixIcon != null
+              ? Icon(
+            suffixIcon,
+            color: AppTheme.TextFieldIconColor(context),
+          )
+              : null,
         ),
       ),
     );
-
   }
 }
-

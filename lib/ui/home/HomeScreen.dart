@@ -3,8 +3,11 @@ import 'package:flutter/material.dart';
 
 import '../../utils/AppImages.dart';
 import '../CreateEvent/CreateEvent.dart';
+import 'Favorite_Tab.dart';
 import 'HomeTab.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
+import 'ProfileTab.dart';
 
 class Homescreen extends StatefulWidget {
   @override
@@ -16,8 +19,8 @@ int selectedindex=0;
 List<Widget>tabs=[
   Hometab(),
   Hometab(),
-  Hometab(),
-  Hometab(),
+  FavoriteTab(),
+  Profiletab(),
 
 ];
   @override

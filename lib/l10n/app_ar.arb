@@ -79,6 +79,12 @@
 "location": "المكان",
 "chooseEventLocation": "اختر مكان الحدث",
 "addEvent": "إضافة حدث",
-"eventDetails": "تفاصيل الحدث"
+"eventDetails": "تفاصيل الحدث",
+  "language": "اللغة",
+  "theme": "الثيم",
+  "arabic": "العربية",
+  "english": "الإنجليزية",
+  "dark": "داكن",
+  "search": "البحث عن حدث"
 }
 
