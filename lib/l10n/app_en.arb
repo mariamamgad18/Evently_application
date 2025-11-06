@@ -77,7 +77,11 @@
   "location": "Location",
   "chooseEventLocation": "Choose Event Location",
   "addEvent": "Add Event",
-  "eventDetails": "Event Details"
-
-
+  "eventDetails": "Event Details",
+  "language": "Language",
+  "theme": "Theme",
+  "arabic": "Arabic",
+  "english": "English",
+  "dark": "Dark",
+  "search":"Search for Event"
 }

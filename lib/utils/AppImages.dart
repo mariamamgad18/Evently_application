@@ -55,4 +55,14 @@ class Appimages {
   static const String Editicon = "assets/images/Union.png";
   static const String Deleteicon= "assets/images/delete2.png";
 
+  static const String Rotelogo2= "assets/images/Rectangle 76.png";
+
+  static const String listimage= "assets/images/Polygon 1.png";
+  static const String  logout = "assets/images/Frame 58.png";
+
+
+  static const String  selectedheart= "assets/images/heart.png";
+  static const String  Unselectedheart = "assets/images/unselectedlove.png";
+
+
 }

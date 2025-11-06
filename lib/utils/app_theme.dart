@@ -88,6 +88,12 @@ return Theme.of(context).brightness == Brightness.light
         : Appcolors.whitecolor; // لو Dark mode
   }
 
+  static Color scaffoldcolor(BuildContext context) {
+    return Theme.of(context).brightness == Brightness.light
+        ? Appcolors.whitecolor  // لو Light mode
+        : Appcolors.darkbluecolor; // لو Dark mode
+  }
+
 
   static String imageicon(BuildContext context) {
     return Theme.of(context).brightness == Brightness.light
